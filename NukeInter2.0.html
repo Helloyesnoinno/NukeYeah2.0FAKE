@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Nuke Time 2.0</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      margin: 20px;
+      background-color: #111;
+      color: #fff;
+    }
+    h1 {
+      text-align: center;
+      color: red;
+    }
+    label, input[type="text"], .checkbox, button {
+      display: block;
+      margin: 10px 0;
+    }
+    input[type="text"] {
+      width: 100%;
+      padding: 8px;
+      border-radius: 5px;
+      border: none;
+    }
+    .checkbox {
+      margin-left: 10px;
+    }
+    .launch-btn {
+      width: 100%;
+      background: red;
+      color: white;
+      padding: 12px;
+      font-size: 18px;
+      border: none;
+      border-radius: 6px;
+    }
+    .popup, .notification {
+      position: fixed;
+      background: #222;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px #000;
+      z-index: 999;
+    }
+    .popup {
+      top: 30%;
+      left: 10%;
+      right: 10%;
+    }
+    .notification {
+      bottom: 10px;
+      right: 10px;
+      font-size: 14px;
+    }
+    .popup button {
+      margin: 10px 5px 0;
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+      font-weight: bold;
+    }
+    .cancel-btn {
+      background: white;
+      color: black;
+    }
+    .confirm-btn {
+      background: red;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <h1>NUKE TIME 2.0</h1>
+  <label>Where?</label>
+  <input type="text" id="target" placeholder="Enter location" />
+
+  <label>What nuke?</label>
+  <label class="checkbox"><input type="checkbox" /> Small Nuke</label>
+  <label class="checkbox"><input type="checkbox" /> Medium Nuke</label>
+  <label class="checkbox"><input type="checkbox" /> BIG NUKE</label>
+
+  <button class="launch-btn" onclick="confirmLaunch()">LAUNCH</button>
+
+  <div id="popup" class="popup" style="display: none;">
+    <p>Are you sure you want to nuke <span id="confirm-location"></span>?<br><strong>You Cannot Revert This</strong></p>
+    <button class="cancel-btn" onclick="closePopup()">Cancel</button>
+    <button class="confirm-btn" onclick="finalLaunch()">Launch Anyway</button>
+  </div>
+
+  <div id="notification" class="notification" style="display: none;"></div>
+
+  <script>
+    function confirmLaunch() {
+      const location = document.getElementById('target').value || "Unknown";
+      document.getElementById('confirm-location').textContent = location;
+      document.getElementById('popup').style.display = 'block';
+    }
+
+    function closePopup() {
+      document.getElementById('popup').style.display = 'none';
+    }
+
+    function finalLaunch() {
+      const location = document.getElementById('target').value || "Unknown";
+      const times = ["50:00", "1h:12m", "2h:45m", "3h:30m", "5h:35m"];
+      const eta = times[Math.floor(Math.random() * times.length)];
+      document.getElementById('popup').style.display = 'none';
+      const note = document.getElementById('notification');
+      note.textContent = `Nuke Launched. It will arrive at ${location} in ${eta}.`;
+      note.style.display = 'block';
+    }
+  </script>
+</body>
+</html>

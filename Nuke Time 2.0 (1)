@@ -1,0 +1,77 @@
+From: <Saved by Blink>
+Snapshot-Content-Location: http://ZS3Qtvu6PNX5baf:7anPmbssoBXZSxu@localhost:55103/storage/emulated/0/Nuke.html
+Subject: Nuke Time 2.0
+Date: Fri, 25 Apr 2025 19:59:21 +0200
+MIME-Version: 1.0
+Content-Type: multipart/related;
+	type="text/html";
+	boundary="----MultipartBoundary--VdSfBtZUX3QdqcTK2QexLf7WImllLjdzv41Iez1WQT----"
+
+
+------MultipartBoundary--VdSfBtZUX3QdqcTK2QexLf7WImllLjdzv41Iez1WQT----
+Content-Type: text/html
+Content-ID: <frame-C3729B7D1F029F72741164FEE74977C7@mhtml.blink>
+Content-Transfer-Encoding: binary
+Content-Location: http://ZS3Qtvu6PNX5baf:7anPmbssoBXZSxu@localhost:55103/storage/emulated/0/Nuke.html
+
+<!DOCTYPE html><html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><link rel="stylesheet" type="text/css" href="cid:css-9af800ab-c04e-4354-b37b-2220b86dd2df@mhtml.blink" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nuke Time 2.0</title>
+  
+</head>
+<body>
+  <h1>NUKE TIME 2.0</h1>
+  <label>Where?</label>
+  <input type="text" id="target" placeholder="Enter location">
+
+  <label>What nuke?</label>
+  <label class="checkbox"><input type="checkbox"> Small Nuke</label>
+  <label class="checkbox"><input type="checkbox"> Medium Nuke</label>
+  <label class="checkbox"><input type="checkbox"> BIG NUKE</label>
+
+  <button class="launch-btn">LAUNCH</button>
+
+  <div id="popup" class="popup" style="display: none;">
+    <p>Are you sure you want to nuke <span id="confirm-location"></span>?<br><strong>You Cannot Revert This</strong></p>
+    <button class="cancel-btn">Cancel</button>
+    <button class="confirm-btn">Launch Anyway</button>
+  </div>
+
+  <div id="notification" class="notification" style="display: none;"></div>
+
+  
+
+
+</body></html>
+------MultipartBoundary--VdSfBtZUX3QdqcTK2QexLf7WImllLjdzv41Iez1WQT----
+Content-Type: text/css
+Content-Transfer-Encoding: binary
+Content-Location: cid:css-9af800ab-c04e-4354-b37b-2220b86dd2df@mhtml.blink
+
+@charset "utf-8";
+
+body { font-family: sans-serif; margin: 20px; background-color: rgb(17, 17, 17); color: rgb(255, 255, 255); }
+
+h1 { text-align: center; color: red; }
+
+label, input[type="text"], .checkbox, button { display: block; margin: 10px 0px; }
+
+input[type="text"] { width: 100%; padding: 8px; border-radius: 5px; border: none; }
+
+.checkbox { margin-left: 10px; }
+
+.launch-btn { width: 100%; background: red; color: white; padding: 12px; font-size: 18px; border: none; border-radius: 6px; }
+
+.popup, .notification { position: fixed; background: rgb(34, 34, 34); padding: 20px; border-radius: 10px; box-shadow: rgb(0, 0, 0) 0px 0px 10px; z-index: 999; }
+
+.popup { top: 30%; left: 10%; right: 10%; }
+
+.notification { bottom: 10px; right: 10px; font-size: 14px; }
+
+.popup button { margin: 10px 5px 0px; padding: 10px; border: none; border-radius: 5px; font-weight: bold; }
+
+.cancel-btn { background: white; color: black; }
+
+.confirm-btn { background: red; color: white; }
+------MultipartBoundary--VdSfBtZUX3QdqcTK2QexLf7WImllLjdzv41Iez1WQT------
